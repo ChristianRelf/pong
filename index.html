@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pong</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Pong</h1>
+        <button class="menu-button" onclick="startGame(1)">Single Player</button>
+        <button class="menu-button" onclick="startGame(2)">Two Player</button>
+        <button class="menu-button" onclick="showCustomization()">Customize</button>
+        <button class="menu-button" onclick="showInstructions()">Instructions</button>
+    </div>
+
+     <div id="customizationMenu" style="display: none;">
+        <h2>Customize</h2>
+        <label for="paddleColor">Paddle Color:</label>
+        <input type="color" id="paddleColor" value="#ffffff">
+
+        <label for="ballColor">Ball Color:</label>
+        <input type="color" id="ballColor" value="#ffffff">
+
+        <label for="bgColor">Background Color:</label>
+        <input type="color" id="bgColor" value="#282c34">
+
+        <button class="menu-button" onclick="backToMenu('customizationMenu')">Back to Menu</button>
+    </div>
+
+    <div id="instructions" style = "display: none">
+        <h2>Controls:</h2>
+        <p>Player 1 (Left): W/S Keys</p>
+        <p>Player 2 (Right): Up/Down Arrow Keys</p>
+        <p>Pause: Escape Key</p>
+    </div>
+
+    <div id="score">0 - 0</div>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="pauseOverlay">
+        <p>Paused</p>
+        <button class="menu-button" onclick="resumeGame()">Resume</button>
+        <button class="menu-button" onclick="backToMenu('pauseOverlay')">Main Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
