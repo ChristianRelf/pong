@@ -21,7 +21,7 @@ const INITIAL_BALL_SPEED_Y = 5;
 const PADDLE_SPEED = 9;
 const BALL_SPEED_INCREASE = .25;
 const MAX_BALL_SPEED = 16;
-const AI_REACTION_DELAY = 8; // Frames of delay.  Higher number = slower reaction.
+const AI_REACTION_DELAY = 3; // Frames of delay.  Higher number = slower reaction.
 
 
 canvas.width = WIDTH;
